@@ -1,0 +1,3 @@
+class Konto {
+int kontostand = 0;
+}
