@@ -1,0 +1,14 @@
+class Überweisung extends Thread {
+private Konto konto;
+private int betrag;
+public Überweisung(Konto konto, int betrag) {
+this.konto = konto;
+this.betrag = betrag;
+}
+public void run() {
+synchronized (konto) {
+int aktuellerKontostand = konto.kontostand;
+int neuerKontostand = aktuellerKontostand + betrag;
+konto.kontostand = neuerKontostand;
+}
+}
