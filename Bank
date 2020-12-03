@@ -1,0 +1,13 @@
+public class Bank {
+public static void main(String[] args) {
+for (int i = 0; i < 10; i++) {
+Konto konto = new Konto();
+Überweisung u1 = new Überweisung(konto, 10);
+Überweisung u2 = new Überweisung(konto, 10);
+Überweisung u3 = new Überweisung(konto, 10);
+u1.start();
+u2.start();
+u3.start();
+}
+}
+}
