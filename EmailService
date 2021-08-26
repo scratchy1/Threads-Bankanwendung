@@ -1,3 +1,6 @@
+/**
+ * Wraps an external service used for sending notifications to customers via e-mail.
+ */
 public class EmailService implements Notification {
 
     private boolean connected;
