@@ -1,0 +1,14 @@
+ /**
+ * Interface specifying messaging capabilities.
+ */
+public interface Notification {
+
+    public void notify(String message, String recipient);
+
+    public void connect();
+
+    public void disconnect();
+
+    public boolean isConnected();
+
+}
