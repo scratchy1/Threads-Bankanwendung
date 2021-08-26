@@ -1,3 +1,4 @@
+/* A commercial bank or credit union with a limited scope of services.*/
 public class Bank{
  private Banking bankservice;
  private Notification notificationService;
