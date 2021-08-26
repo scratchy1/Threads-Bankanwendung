@@ -1,0 +1,47 @@
+public class CustomerTest {
+
+    /**
+     *  The system should be able to store information on a new customer using valid data.
+     *  Scenario:
+     *  1. Given I create a new customer named Hans Müller
+     *  2. When I initialize the customer object with valid details.
+     *  3. Then Hans's information should be stored in the system.
+     */
+    @Test
+    public void creatingCustomerWithValidData_StoresSpecifiedData() {
+
+        // Given and When
+        Customer customer = new Customer("Hans Müller", "Berlin", "Hans@Berlin.com");
+
+        // Then
+        assertNotNull(customer);
+        assertEquals(customer.getName(), "Hans Müller");
+        assertEquals(customer.getAddress(), "Berlin");
+        assertEquals(customer.getEmail(), "Hans@Berlin.com");
+    }
+
+    /**
+     *  The system should be able to update customer information using valid data.
+     *  Scenario:
+     *  1. Given I create a new customer named Hans Müller.
+     *  2. When I update Hans's customer information with Anna's information.
+     *  3. Then Anna's information should be stored in the system.
+     */
+    @Test
+    public void updatingCustomerDataWithDifferentValidValues_StoresNewValues() {
+
+        // Given
+        Customer customer = new Customer("Hans", "Berlin", "Hans@Berlin.com");
+
+        // When
+        customer.updateName("Anna Schulz");
+        customer.updateAddress("Berlin");
+        customer.updateEmail("Anna@Berlin.com");
+
+        // Then
+        assertEquals(customer.getName(), "Anna Schulz");
+        assertEquals(customer.getAddress(), "Berlin");
+        assertEquals(customer.getEmail(), "Anna@Berlin.com");
+
+    }
+}
