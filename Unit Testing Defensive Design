@@ -5,7 +5,7 @@ public class SavingsAccountTest {
 
     @BeforeClass
     public void oneTimeSetup() {
-        customer = new Customer ("Mickey Mouse", "Disneyland", "Mickey@disneyland.com");
+        customer = new Customer ("Hans Müller", "Berlin", "Hans@Berlin.com");
     }
 
     @BeforeMethod
